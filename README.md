@@ -17,7 +17,7 @@ Create a table in BQ using the Green Taxi Trip Records for 2022 (do not partitio
 
 ### Create Green Tripdata External Table
 
-*Source Data* : the 2022 Green Taxi Trip Record Parquet Files from the New York City Taxi Data (January - December 2022)
+**Source Data** : the 2022 Green Taxi Trip Record Parquet Files from the New York City Taxi Data (January - December 2022)
 
 [https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
@@ -31,6 +31,13 @@ OPTIONS (
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/dd2ea337-461d-41c3-92ac-b8945f55dd3a)
 
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/97a04e35-ff13-4e95-a941-56e5b6b983db)
+
+*Question 1: What is count of records for the 2022 Green Taxi Data?*
+```
+SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/5f9e2d6b-32eb-4988-8258-a6d984b85930)
+
 
 
 
