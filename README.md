@@ -32,14 +32,6 @@ OPTIONS (
 
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/97a04e35-ff13-4e95-a941-56e5b6b983db)
 
-*Question 1: What is count of records for the 2022 Green Taxi Data?*
-```
-SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
-```
-![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/5f9e2d6b-32eb-4988-8258-a6d984b85930)
-
-
-
 
 ## Question 1:
 Question 1: What is count of records for the 2022 Green Taxi Data??
@@ -47,6 +39,13 @@ Question 1: What is count of records for the 2022 Green Taxi Data??
 - 840,402
 - 1,936,423
 - 253,647
+
+*Answer 1:*
+```
+SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/5f9e2d6b-32eb-4988-8258-a6d984b85930)
+
 
 ## Question 2:
 Write a query to count the distinct number of PULocationIDs for the entire dataset on both the tables.</br> 
