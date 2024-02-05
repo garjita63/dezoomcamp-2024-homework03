@@ -36,8 +36,8 @@ OPTIONS (
 ## Question 1:
 Question 1: What is count of records for the 2022 Green Taxi Data??
 - 65,623,481
-- ==840,402==
-- <span style="color:green;"<840,402> </span>
+- 840,402
+- <code style="color : greenyellow">840,402</code>
 - 1,936,423
 - 253,647
 
