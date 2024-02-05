@@ -1,5 +1,3 @@
-# Week 3 (Data Warehouse) Homework Solutions
-
 ## Week 3 Homework
 ATTENTION: At the end of the submission form, you will be required to include a link to your GitHub repository or other public code-hosting site. This repository should contain your code for solving the homework. If your solution includes code that is not in file format (such as SQL queries or shell commands), please include these directly in the README file of your repository.
 
@@ -14,9 +12,12 @@ Create an external table using the Green Taxi Trip Records Data for 2022. </br>
 Create a table in BQ using the Green Taxi Trip Records for 2022 (do not partition or cluster this table). </br>
 </p>
 
-## Create Green Trpdata External Table
 
-Source Data : the 2022 Green Taxi Trip Record Parquet Files from the New York City Taxi Data (January - December 2022)
+## Week 3 (Data Warehouse) Homework Solutions
+
+### Create Green Tripdata External Table
+
+*Source Data* : the 2022 Green Taxi Trip Record Parquet Files from the New York City Taxi Data (January - December 2022)
 
 [https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
@@ -27,6 +28,10 @@ OPTIONS (
   uris = ['gs://de-zoomcamp-garjita-bucket/green_tripdata_2022/green_tripdata_2022-*.parquet']	
 );
 ```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/dd2ea337-461d-41c3-92ac-b8945f55dd3a)
+
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/97a04e35-ff13-4e95-a941-56e5b6b983db)
+
 
 
 ## Question 1:
