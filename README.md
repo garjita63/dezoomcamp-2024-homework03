@@ -41,6 +41,10 @@ Question 1: What is count of records for the 2022 Green Taxi Data??
 - 1,936,423
 - 253,647
 
+- # Markdown
+     <span style="color:red;">your text here > </span>
+     
+
 *Answer 1:*
 ```
 SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
