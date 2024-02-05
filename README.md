@@ -56,6 +56,21 @@ What is the estimated amount of data that will be read when this query is execut
 - 0 MB for the External Table and 0MB for the Materialized Table
 - 2.14 MB for the External Table and 0MB for the Materialized Table
 
+## Answer 2:
+
+External table:
+```
+SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/cc89e4a6-9f7c-46d1-9820-2144e370e335)
+
+ External Table 
+ ```
+SELECT DISTINCT(PULocationID) FROM taxidataset.external_green_tripdata;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/1849a5a8-ee78-4e3a-8882-a7482cca1149)
+
+
 
 ## Question 3:
 How many records have a fare_amount of 0?
