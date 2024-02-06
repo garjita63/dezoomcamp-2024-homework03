@@ -12,9 +12,6 @@ Create an external table using the Green Taxi Trip Records Data for 2022. </br>
 Create a table in BQ using the Green Taxi Trip Records for 2022 (do not partition or cluster this table). </br>
 </p>
 
-
-## Week 3 (Data Warehouse) Homework Solutions
-
 ### Create Green Tripdata External Table
 
 **Source Data** : the 2022 Green Taxi Trip Record Parquet Files from the New York City Taxi Data (January - December 2022)
@@ -41,6 +38,9 @@ SELECT * FROM taxidataset.external_green_tripdata;
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/59a4252e-0c22-4252-a92e-fc4ae3cfac46)
 
+
+
+## Week 3 (Data Warehouse) Homework Solutions
 
 ## Question 1:
 Question 1: What is count of records for the 2022 Green Taxi Data??
@@ -215,4 +215,7 @@ SELECT COUNT(*) FROM taxidataset.green_tripdata_partitioned;
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/df9115b5-77fb-4f41-a34f-8878716276ab)
 
+ --> 0 bytes
  
+Because: query SELECT COUNT(*) is getting answered from metadata tables, hence no cost.
+
