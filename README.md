@@ -185,7 +185,7 @@ Answer --> <code style="color:green">GCP Bucket</code>
 
 ## Question 7:
 It is best practice in Big Query to always cluster your data:
-- True
+- <code style="color:green">True</code>
 - False
 
 ## Answer 7:
@@ -194,7 +194,7 @@ It is best practice in Big Query to always cluster your data:
 - If your queries filter on columns that have many distinct values (high cardinality), clustering accelerates these queries by providing BigQuery with detailed metadata for where to get input data.
 - Clustering enables your table's underlying storage blocks to be adaptively sized based on the size of the table.
 
-Answer --> True
+Answer --><code style="color:green">True</code>
 
 
 ## (Bonus: Not worth points) Question 8:
