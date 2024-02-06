@@ -22,6 +22,7 @@ Create a table in BQ using the Green Taxi Trip Records for 2022 (do not partitio
 [https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
 ```
+-- Create Green Tripdata External Table
 CREATE OR REPLACE EXTERNAL TABLE `taxidataset.external_green_tripdata`
 OPTIONS (
   format = 'PARQUET',
@@ -31,6 +32,14 @@ OPTIONS (
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/dd2ea337-461d-41c3-92ac-b8945f55dd3a)
 
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/97a04e35-ff13-4e95-a941-56e5b6b983db)
+
+### Create a non partitioned table from external table
+```
+-- Create a non partitioned table from external table
+CREATE OR REPLACE TABLE taxidataset.green_tripdata_non_partitioned AS
+SELECT * FROM taxidataset.external_green_tripdata;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/59a4252e-0c22-4252-a92e-fc4ae3cfac46)
 
 
 ## Question 1:
@@ -46,7 +55,7 @@ SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_trip
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/5f9e2d6b-32eb-4988-8258-a6d984b85930)
 
-Anser --> <code style="color:green">840,402</code>
+Answer --> <code style="color:green">840,402</code>
 
 
 ## Question 2:
@@ -67,9 +76,12 @@ SELECT DISTINCT(PULocationID) FROM taxidataset.external_green_tripdata;
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/1849a5a8-ee78-4e3a-8882-a7482cca1149)
 
 *Select from non-partitioned table in BigQuery*
-![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/d8a9ceb6-9b66-4d61-ab8c-5679b2643eb9)
+```
+SELECT DISTINCT(PULocationID) FROM taxidataset.green_tripdata_non_partitioned;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/b9d86199-d717-42c3-96ee-be1d280dc687)
 
-Anser --> <code style="color:green">0 MB for the External Table and 6.41MB for the Materialized Table</code>
+Answer --> <code style="color:green">0 MB for the External Table and 6.41MB for the Materialized Table</code>
  
 
 ## Question 3:
@@ -140,10 +152,10 @@ SELECT * FROM taxidataset.external_green_tripdata;
 *Select from non-partitioned table*
 ```
 SELECT DISTINCT(PULocationID) 
-FROM taxidataset.green_tripdata_non_partitoned
+FROM taxidataset.green_tripdata_non_partitioned
 WHERE DATE(lpep_pickup_datetime) BETWEEN '2022-06-01' and '2022-06-30';
 ```
-![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/5a157deb-1ef3-478d-b495-651eb2b6bd0f)
+![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/24891e1f-69d2-4296-b8ac-95f1fbf57757)
 
 *Select from partitioned table*
 ```
@@ -192,18 +204,15 @@ No Points: Write a SELECT count(*) query FROM the materialized table you created
 
 *Select from non_partitioned table*
 ```
-SELECT COUNT(*) FROM taxidataset.green_tripdata_non_partitoned;
+SELECT COUNT(*) FROM taxidataset.green_tripdata_non_partitioned;
 ```
-![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/e0a0f8a2-914e-424f-91d9-452e4814b441)
+![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/4c43a89e-4251-4e45-b6e8-3b3261e31b14)
+
 
 *Select from partitioned table*
 ```
+SELECT COUNT(*) FROM taxidataset.green_tripdata_partitioned;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/df9115b5-77fb-4f41-a34f-8878716276ab)
 
  
-## Submitting the solutions
-
-* Form for submitting: TBD
-* You can submit your homework multiple times. In this case, only the last submission will be used. 
-
-Deadline: TBD
-
