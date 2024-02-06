@@ -190,6 +190,15 @@ No Points: Write a SELECT count(*) query FROM the materialized table you created
 
 ## Answer 8:
 
+*Select from non_partitioned table*
+```
+SELECT COUNT(*) FROM taxidataset.green_tripdata_non_partitoned;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/e0a0f8a2-914e-424f-91d9-452e4814b441)
+
+*Select from partitioned table*
+```
+
  
 ## Submitting the solutions
 
