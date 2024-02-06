@@ -40,7 +40,7 @@ Question 1: What is count of records for the 2022 Green Taxi Data??
 - 1,936,423
 - 253,647
 
-*Answer 1:*
+## Answer 1:
 ```
 SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
 ```
@@ -79,14 +79,15 @@ How many records have a fare_amount of 0?
 - 112
 - <code style="color:green">1,622</code>
 
-Answer 3:
-Select from external table
+## Answer 3:
+
+*Select from external table*
 ```
 SELECT COUNT(*) from taxidataset.external_green_tripdata WHERE fare_amount=0;
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/0e452a0e-1382-4e3a-bada-e444f4c4139d)
 
-Select from non-prtitioned table
+*Select from non-prtitioned table*
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/678793cc-f317-44b5-ab8f-5b0ec4617a6e)
 
 <code style="color:green">1,622</code>
@@ -96,10 +97,19 @@ Select from non-prtitioned table
 What is the best strategy to make an optimized table in Big Query if your query will always order the results by PUlocationID and filter based on lpep_pickup_datetime? (Create a new table with this strategy)
 - Cluster on lpep_pickup_datetime Partition by PUlocationID
 - Partition by lpep_pickup_datetime  Cluster on PUlocationID
+- <code style="color:green">Partition by lpep_pickup_datetime  Cluster on PUlocationID</code>
 - Partition by lpep_pickup_datetime and Partition by PUlocationID
 - Cluster on by lpep_pickup_datetime and Cluster on PUlocationID
 
-*Answer 4:*
+## Answer 4:
+
+Best partcice for query performance: 
+```
+i) Filter on partitioned columns
+ii) the order of the columns in which the clustering is specified is important in order to determine the column priority
+```
+<code style="color:green">Partition by lpep_pickup_datetime  Cluster on PUlocationID</code>
+
 
 ## Question 5:
 Write a query to retrieve the distinct PULocationID between lpep_pickup_datetime
@@ -113,7 +123,7 @@ Choose the answer which most closely matches.</br>
 - 12.82 MB for non-partitioned table and 1.12 MB for the partitioned table
 - 5.63 MB for non-partitioned table and 0 MB for the partitioned table
 - 10.31 MB for non-partitioned table and 10.31 MB for the partitioned table
-
+##
 
 ## Question 6: 
 Where is the data stored in the External Table you created?
