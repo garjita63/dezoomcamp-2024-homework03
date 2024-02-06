@@ -77,13 +77,19 @@ How many records have a fare_amount of 0?
 - 12,488
 - 128,219
 - 112
-- 1,622
+- <code style="color:green">1,622</code>
 
 Answer 3:
+Select from external table
 ```
 SELECT COUNT(*) from taxidataset.external_green_tripdata WHERE fare_amount=0;
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/0e452a0e-1382-4e3a-bada-e444f4c4139d)
+
+Select from non-prtitioned table
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/678793cc-f317-44b5-ab8f-5b0ec4617a6e)
+
+<code style="color:green">1,622</code>
 
 
 ## Question 4:
@@ -92,6 +98,8 @@ What is the best strategy to make an optimized table in Big Query if your query 
 - Partition by lpep_pickup_datetime  Cluster on PUlocationID
 - Partition by lpep_pickup_datetime and Partition by PUlocationID
 - Cluster on by lpep_pickup_datetime and Cluster on PUlocationID
+
+*Answer 4:*
 
 ## Question 5:
 Write a query to retrieve the distinct PULocationID between lpep_pickup_datetime
