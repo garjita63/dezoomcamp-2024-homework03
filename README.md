@@ -1,4 +1,5 @@
-## Week 3 Homework
+## Week 3 (Data Warehouse) Homework Solutions
+
 ATTENTION: At the end of the submission form, you will be required to include a link to your GitHub repository or other public code-hosting site. This repository should contain your code for solving the homework. If your solution includes code that is not in file format (such as SQL queries or shell commands), please include these directly in the README file of your repository.
 
 <b><u>Important Note:</b></u> <p> For this homework we will be using the 2022 Green Taxi Trip Record Parquet Files from the New York
@@ -38,9 +39,6 @@ SELECT * FROM taxidataset.external_green_tripdata;
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework03/assets/77673886/59a4252e-0c22-4252-a92e-fc4ae3cfac46)
 
-
-
-## Week 3 (Data Warehouse) Homework Solutions
 
 ## Question 1:
 Question 1: What is count of records for the 2022 Green Taxi Data??
