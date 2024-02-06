@@ -46,31 +46,31 @@ SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_trip
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/5f9e2d6b-32eb-4988-8258-a6d984b85930)
 
+<code style="color:green">840,402</code>
+
 
 ## Question 2:
 Write a query to count the distinct number of PULocationIDs for the entire dataset on both the tables.</br> 
 What is the estimated amount of data that will be read when this query is executed on the External Table and the Table?
 
-- 0 MB for the External Table and 6.41MB for the Materialized Table
+- <code style="color:green">0 MB for the External Table and 6.41MB for the Materialized Table</code>
 - 18.82 MB for the External Table and 47.60 MB for the Materialized Table
 - 0 MB for the External Table and 0MB for the Materialized Table
 - 2.14 MB for the External Table and 0MB for the Materialized Table
 
 ## Answer 2:
 
-External table:
-```
-SELECT  COUNT(*) FROM `dtc-de-course-2024-411803.taxidataset.external_green_tripdata`;
-```
-![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/cc89e4a6-9f7c-46d1-9820-2144e370e335)
-
- External Table 
+*Select from External Table in BigQuery*
  ```
 SELECT DISTINCT(PULocationID) FROM taxidataset.external_green_tripdata;
 ```
 ![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/1849a5a8-ee78-4e3a-8882-a7482cca1149)
 
+*Select from non-partitioned table in BigQuery*
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/d8a9ceb6-9b66-4d61-ab8c-5679b2643eb9)
 
+<code style="color:green">0 MB for the External Table and 6.41MB for the Materialized Table</code>
+ 
 
 ## Question 3:
 How many records have a fare_amount of 0?
@@ -78,6 +78,13 @@ How many records have a fare_amount of 0?
 - 128,219
 - 112
 - 1,622
+
+Answer 3:
+```
+SELECT COUNT(*) from taxidataset.external_green_tripdata WHERE fare_amount=0;
+```
+![image](https://github.com/garjita63/dezoomcamp-2024-homework/assets/77673886/0e452a0e-1382-4e3a-bada-e444f4c4139d)
+
 
 ## Question 4:
 What is the best strategy to make an optimized table in Big Query if your query will always order the results by PUlocationID and filter based on lpep_pickup_datetime? (Create a new table with this strategy)
